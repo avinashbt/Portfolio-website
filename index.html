@@ -22,13 +22,17 @@
     />
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="styles.css" />
-
+ 
     <script>
-      var msg = new SpeechSynthesisUtterance();
-msg.text = "Hello World";
+      const myTimeout = setTimeout(newspeech, 2000);      
+      function newspeech() {
+        var msg = new SpeechSynthesisUtterance();
+msg.text = "Hello, my name is Avinash Bawaagee. I am a web developer";
 window.speechSynthesis.speak(msg);
-    </script>
-    
+      }
+      // window.onload = newspeech;
+      </script>
+
     <title>Portfolio Website</title>
   </head>
   <a>
@@ -115,6 +119,7 @@ window.speechSynthesis.speak(msg);
           </p>
           <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing" class="btn">Download CV</a>
         </div>
+     
       </div>
     </section>
 
