@@ -23,11 +23,12 @@
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="styles.css" />
 
-    <style>
-      .Container1{
-        display: none;
-      }
-    </style>>
+    <script>
+      var msg = new SpeechSynthesisUtterance();
+msg.text = "Hello World";
+window.speechSynthesis.speak(msg);
+    </script>
+    
     <title>Portfolio Website</title>
   </head>
   <a>
@@ -363,15 +364,7 @@
     <footer>
       <p>Created By <span>AB Coder</span> | &copy; 2021 All rights reserved.</p>
     </footer>
-    <div class="Container1">  
-      <h2 id="texspeech">  Select Voice:</h2>
-        <select id="voiceList"></select>
-        <br /><br />
-    
-         <textarea id="txtInput"></textarea>
-         <br/>    
-        <button id="btnSpeak">Speak!</button>
-    </div>
+   
     <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Typeit -->
@@ -381,11 +374,7 @@
     <!-- Glidejs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <!-- Custom Script -->
-    <script>
-      var msg = new SpeechSynthesisUtterance();
-msg.text = "Hello World";
-window.speechSynthesis.speak(msg);
-    </script>
+   
     <script src="index.js"></script>
   </body>
 </html>
