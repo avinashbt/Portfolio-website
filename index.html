@@ -31,6 +31,8 @@ msg.text = "Hello, my name is Avinash Bawaagee. I am a web developer";
 window.speechSynthesis.speak(msg);
       }
       // window.onload = newspeech;
+
+    myTimeout();
       </script>
 
     <title>Portfolio Website</title>
@@ -115,7 +117,7 @@ window.speechSynthesis.speak(msg);
         <div class="right" data-aos="fade-left" data-aos-duration="2000">
           <h1>I'm Avinash Bawage a <span id="type2"></span></h1>
           <p>
-            Hi Sir/Mam, I am Avinash Bawage. I am a web Developer and Digital Marketer. I have 2years of Experience in Digital Marketing(Freelancing) and 8 months Experience in web Development. Skills I Know is html, Css, Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)  
+            Hi Sir/Mam, I am Avinash Bawage. I am a web Developer and Digital Marketer. I have 2years of Experience in Digital Marketing(Freelancing) and  1 year Experience in web Development From <b> March 2021 </b> to  <b> <span id="dates"></span> </b> <span id="times"> </span>  . Skills I Know is html, Css, Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)  
           </p>
           <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing" class="btn">Download CV</a>
         </div>
@@ -379,7 +381,34 @@ window.speechSynthesis.speak(msg);
     <!-- Glidejs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <!-- Custom Script -->
-   
+   <script>
+     setTimeout(() => {
+       
+     
+      const d = new Date(); 
+      const b = d.getDate()
+      const c = d.getMonth() + 1;
+      const e = d.getFullYear();
+      
+      const f = d.getHours();
+    
+      const g = d.getMinutes();
+      
+      const s = d.getSeconds();
+
+      console.log(f);
+    
+      var suffix = f >= 12 ? "PM":"AM";
+      // var hours = ((hour + 11) % 12 + 1) + suffix;
+    
+      document.getElementById("dates").innerHTML = ` ${b} / ${c} / ${e}  `;
+    
+    document.getElementById("times").innerHTML = ` Time is <b> ${f}:${g}: ${s} ${suffix} (On Work) <b>`;
+    }, 500);
+    
+
+
+   </script>
     <script src="index.js"></script>
   </body>
 </html>
