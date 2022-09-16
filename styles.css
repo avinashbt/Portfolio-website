@@ -389,9 +389,9 @@ a.btn {
   display: inline-block;
   padding: 1rem 2rem;
  
-  color: #fff;
+  color: #8342F9;
   border-radius: 0.5rem;
-  border: 2px solid #dd9a05;
+  border: 2px solid #8342F9;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   transition: all 300ms ease-in-out;
 }
@@ -400,6 +400,7 @@ a.btn:hover {
   transform: translateY(-3px);
   background-color: transparent;
   color: inherit;
+  color: #8342F9;
 }
 
 a.btn:active {
@@ -711,4 +712,5 @@ a { color: white; }
 
 .btn:hover{
   color: aqua;
+  background-color: aqua;
 }
