@@ -14,44 +14,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="styles.css" />
-<style>
-  #clock{
-     color: #8342F9;
+  <style>
+    #clock {
+      color: #8342F9;
 
-  }
-  button{
-  background-color: #8342F9; 
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  }
-</style>
+    }
 
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
+    button {
+      background-color: #8342F9;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
 
-<script>
-  function sendEmail(){
-    Email.send({
-  Host : "smtp.gmail.com",
-  Username : "avi.bawge9@gmail.com",
-  Password : "password",
-  To : 'avi.bawge9@gmail.com',
-  From : document.getElementById("email").value,
-  Subject : "The Messages",
-  Body : "New Contact Form Enquiry"
-}).then(
-message => alert(message)
-);
-  }
-</script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+
   <script>
-    const myTimeout = setTimeout(newspeech, 1000);
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "avi.bawge9@gmail.com",
+        Password: "password",
+        To: 'avi.bawge9@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "The Messages",
+        Body: "New Contact Form Enquiry"
+      }).then(
+        message => alert(message)
+      );
+    }
+  </script>
+  <script>
+    const myTimeout = () => (setTimeout(newspeech, 1000));
     function newspeech() {
       var msg = new SpeechSynthesisUtterance();
       msg.text = "Hello, my name is Avinash Bawaagee. I am a web developer";
@@ -64,472 +65,534 @@ message => alert(message)
 
   <title>Portfolio Website</title>
 </head>
-<body  onload="timeCount();">
-  
+
+<body onload="timeCount();">
 
 
-<a>
-  <!-- Header -->
-  <header id="home" class="header">
-    <!-- Navigation -->
-    <nav class="nav">
-      <div class="navigation container">
-        <div class="logo">
-          <h1>AB Developer<span>.</span></h1>
-        </div>
 
-        <div class="menu">
-          <div class="top-nav">
-            <div class="logo">
-              <h1>AB Developer<span>.</span></h1>
+  <a>
+    <!-- Header -->
+    <header id="home" class="header">
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="navigation container">
+          <div class="logo">
+            <h1>AB Developer<span>.</span></h1>
+          </div>
+
+          <div class="menu">
+            <div class="top-nav">
+              <div class="logo">
+                <h1>AB Developer<span>.</span></h1>
+              </div>
+              <div class="close">
+                <i class="fas fa-times"></i>
+              </div>
             </div>
-            <div class="close">
-              <i class="fas fa-times"></i>
+
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#home" class="nav-link scroll-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link scroll-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link scroll-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link scroll-link">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a href="#teams" class="nav-link scroll-link">My Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link scroll-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+      <div class="hero">
+        <h3>Hello, my name is</h3>
+        <h1>Avinash Bawage</h1>
+        <h4>And I'm a <span id="type1"></span></h4>
+        <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing">Hire me</a>
+      </div>
+
+      <img class="banner" src="./bg.png" alt="" />
+
+      <div class="icons">
+        <span><a href="https://github.com/Avinashbawage" target="_blank"> <i class="fab fa-github"></i> </a> </span>
+        <span><a href="https://www.linkedin.com/in/avinash-b-99ba58200/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a></span>
+        <span> <a href="https://twitter.com/AvinashBawge"><i class="fab fa-twitter"></i></a></span>
+        <span><a> <i class="fab fa-facebook-f"></i> </a> </span>
+        <span> <a> <i class="fab fa-instagram"></i> </a> </span>
+
+      </div>
+    </header>
+
+    <!-- Main -->
+    <section class="section about" id="about">
+      <div class="title">
+        <h1>About me</h1>
+      </div>
+
+      <div class="about-center container">
+        <div class="left" data-aos="fade-right" data-aos-duration="2000">
+          <img src="./profile1.jpg" alt="" />
+        </div>
+        <div class="right" data-aos="fade-left" data-aos-duration="2000">
+          <h1>I'm Avinash Bawage a <span id="type2"></span></h1>
+          <p>
+            Hi Sir/Mam, I am Avinash Bawage. I am a web Developer and Digital Marketer(FreeLancing). 1+ year Experience
+            in web Development From <b> </b> <b> <span id="dates"></span> </b> <span id="times"> </span> <span
+              id="clock"></span> . Skills I Know is html, Css,
+            Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)
+          </p>
+          <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing"
+            class="btn">Download CV</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section theme" id="services">
+      <div class="title">
+        <h1>My Services</h1>
+      </div>
+
+      <div class="services-center container">
+        <div class="service" data-aos="fade-down" data-aos-duration="2000">
+          <span><i class="fab fa-accusoft"></i></span>
+          <h2>Web Design</h2>
+          <p>
+            A website is a collection of web pages and related content that is identified by a common domain name and
+            published on at least one web server.
+          </p>
+        </div>
+
+        <div class="service" data-aos="fade-up" data-aos-duration="2000">
+          <span> <i class="fas fa-blender-phone"></i> </span>
+          <h2>Mobile App Design</h2>
+          <p>
+            A mobile application, also referred to as a mobile app or simply an app, is a computer program or software
+            application designed to run on a mobile device such as a phone, tablet, or watch.
+          </p>
+        </div>
+
+        <div class="service" data-aos="fade-down" data-aos-duration="2000">
+          <span> <i class="fas fa-chart-line"></i></span>
+          <h2>Digital Marketing</h2>
+          <p>
+            Digital Marketing refers to advertising delivered through digital channels such as search engines, websites,
+            social media, email, and mobile apps. Using these online media.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="title">
+        <h1>My Skills</h1>
+      </div>
+
+      <div class="skills-center container">
+        <div class="skills-left" data-aos="fade-right" data-aos-duration="2000">
+          <div class="skills-box">
+            <h4>HTML5</h4>
+            <div class="skills-ilt">
+              <div class="skills-bar html"></div>
+              <span>95%</span>
+            </div>
+          </div>
+          <div class="skills-box">
+            <h4>CSS</h4>
+            <div class="skills-ilt">
+              <div class="skills-bar css"></div>
+              <span>85%</span>
+            </div>
+          </div>
+          <div class="skills-box">
+            <h4>JavaScript</h4>
+            <div class="skills-ilt">
+              <div class="skills-bar javascript"></div>
+              <span>90%</span>
+            </div>
+          </div>
+          <div class="skills-box">
+            <h4>Bootstrap</h4>
+            <div class="skills-ilt">
+              <div class="skills-bar javascript"></div>
+              <span>90%</span>
+            </div>
+          </div>
+          <div class="skills-box">
+            <h4>React Js and Redux </h4>
+            <div class="skills-ilt">
+              <div class="skills-bar css"></div>
+              <span>85%</span>
             </div>
           </div>
 
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#home" class="nav-link scroll-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link scroll-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#services" class="nav-link scroll-link">Services</a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills" class="nav-link scroll-link">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a href="#teams" class="nav-link scroll-link">My Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link scroll-link">Contact us</a>
-            </li>
-          </ul>
+
         </div>
 
-        <div class="hamburger">
-          <i class="fas fa-bars"></i>
+        <div class="right" data-aos="fade-left" data-aos-duration="2000">
+          <h3>My creative skills and experience</h3>
+          <p>
+            Hi Sir, I am Avinash. I am web Developer and Digital Marketer. I am Good in Creating website with Boostrap.
+            Skills I Know html,css,Javascript,Bootstrap,React js, Node Js and MySQL. I am Looking for Job on React JS.
+          </p>
+          <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing" class="btn">Read
+            more</a>
         </div>
       </div>
-    </nav>
-    <!-- Hero -->
-    <div class="hero">
-      <h3>Hello, my name is</h3>
-      <h1>Avinash Bawage</h1>
-      <h4>And I'm a <span id="type1"></span></h4>
-      <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing">Hire me</a>
-    </div>
+    </section>
 
-    <img class="banner" src="./bg.png" alt="" />
-
-    <div class="icons">
-      <span><a href="https://github.com/Avinashbawage" target="_blank"> <i class="fab fa-github"></i> </a> </span>
-      <span><a href="https://www.linkedin.com/in/avinash-b-99ba58200/" target="_blank"><i
-            class="fab fa-linkedin-in"></i></a></span>
-      <span> <a href="https://twitter.com/AvinashBawge"><i class="fab fa-twitter"></i></a></span>
-      <span><a> <i class="fab fa-facebook-f"></i> </a> </span>
-      <span> <a> <i class="fab fa-instagram"></i> </a> </span>
-
-    </div>
-  </header>
-
-  <!-- Main -->
-  <section class="section about" id="about">
-    <div class="title">
-      <h1>About me</h1>
-    </div>
-
-    <div class="about-center container">
-      <div class="left" data-aos="fade-right" data-aos-duration="2000">
-        <img src="./profile1.jpg" alt="" />
-      </div>
-      <div class="right" data-aos="fade-left" data-aos-duration="2000">
-        <h1>I'm Avinash Bawage a <span id="type2"></span></h1>
-        <p>
-          Hi Sir/Mam, I am Avinash Bawage. I am a web Developer and Digital Marketer(FreeLancing). 1+ year Experience in web Development From <b> </b> <b> <span
-              id="dates"></span> </b> <span id="times"> </span> <span id="clock"></span>  . Skills I Know is html, Css,
-          Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)
-        </p>
-        <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing"
-          class="btn">Download CV</a>
+    <!-- Teams -->
+    <section class="section theme" id="teams">
+      <div class="title">
+        <h1>My Projects</h1>
       </div>
 
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="section theme" id="services">
-    <div class="title">
-      <h1>My Services</h1>
-    </div>
-
-    <div class="services-center container">
-      <div class="service" data-aos="fade-down" data-aos-duration="2000">
-        <span><i class="fab fa-accusoft"></i></span>
-        <h2>Web Design</h2>
-        <p>
-          A website is a collection of web pages and related content that is identified by a common domain name and
-          published on at least one web server.
-        </p>
-      </div>
-
-      <div class="service" data-aos="fade-up" data-aos-duration="2000">
-        <span> <i class="fas fa-blender-phone"></i> </span>
-        <h2>Mobile App Design</h2>
-        <p>
-          A mobile application, also referred to as a mobile app or simply an app, is a computer program or software
-          application designed to run on a mobile device such as a phone, tablet, or watch.
-        </p>
-      </div>
-
-      <div class="service" data-aos="fade-down" data-aos-duration="2000">
-        <span> <i class="fas fa-chart-line"></i></span>
-        <h2>Digital Marketing</h2>
-        <p>
-          Digital Marketing refers to advertising delivered through digital channels such as search engines, websites,
-          social media, email, and mobile apps. Using these online media.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="section skills" id="skills">
-    <div class="title">
-      <h1>My Skills</h1>
-    </div>
-
-    <div class="skills-center container">
-      <div class="skills-left" data-aos="fade-right" data-aos-duration="2000">
-        <div class="skills-box">
-          <h4>HTML5</h4>
-          <div class="skills-ilt">
-            <div class="skills-bar html"></div>
-            <span>95%</span>
-          </div>
-        </div>
-        <div class="skills-box">
-          <h4>CSS</h4>
-          <div class="skills-ilt">
-            <div class="skills-bar css"></div>
-            <span>85%</span>
-          </div>
-        </div>
-        <div class="skills-box">
-          <h4>JavaScript</h4>
-          <div class="skills-ilt">
-            <div class="skills-bar javascript"></div>
-            <span>90%</span>
-          </div>
-        </div>
-        <div class="skills-box">
-          <h4>Bootstrap</h4>
-          <div class="skills-ilt">
-            <div class="skills-bar javascript"></div>
-            <span>90%</span>
-          </div>
-        </div>
-        <div class="skills-box">
-          <h4>React Js and Redux </h4>
-          <div class="skills-ilt">
-            <div class="skills-bar css"></div>
-            <span>85%</span>
-          </div> 
-        </div>
-
-
-      </div>
-
-      <div class="right" data-aos="fade-left" data-aos-duration="2000">
-        <h3>My creative skills and experience</h3>
-        <p>
-          Hi Sir, I am Avinash. I am web Developer and Digital Marketer. I am Good in Creating website with Boostrap.
-          Skills I Know html,css,Javascript,Bootstrap,React js, Node Js and MySQL. I am Looking for Job on React JS.
-        </p>
-        <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing" class="btn">Read
-          more</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Teams -->
-  <section class="section theme" id="teams">
-    <div class="title">
-      <h1>My Projects</h1>
-    </div>
-
-    <div class="teams-center container">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./unitconversion.PNG" alt="" />
+      <div class="teams-center container">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./unitconversion.PNG" alt="" />
+                  </div>
+                  <h3><strong> Weight Conversion website </strong></h3>
+                  <p>
+                    This website is Made with html,css and JavaScript. It will helps to Convert weight Conversion. Where
+                    a
+                    Person can Enter Number in Pounds. It will show the Results in Grams, Kgs and Ounce
+                    <br />
+                    <br />
+                    <a style="color: aliceblue;"
+                      href="https://avinashbawage.github.io/Weight-Conversion-website-or-App/" class="btn"
+                      target="_blank"> Click Here </a>
+                  </p>
                 </div>
-                <h3><strong> Weight Conversion website </strong></h3>
-                <p>
-                  This website is Made with html,css and JavaScript. It will helps to Convert weight Conversion. Where a
-                  Person can Enter Number in Pounds. It will show the Results in Grams, Kgs and Ounce
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./mathwebsite.PNG" alt="" />
+                  </div>
+                  <h3><strong> Math Website (html+css) </strong></h3>
+                  <p>
+                    This is a Simple website which is Made with html and CSS. It is Education website. This website is
+                    Online Tutorial website.
+                    <br />
+                    <br />
+                    <a style="color: aliceblue;" href="https://avinashbawage.github.io/SingleWebsite/" class="btn"
+                      target="_blank">
+                      Click Here </a>
+                  </p>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./calculator.PNG" alt="" />
+                  </div>
+                  <h3> Calculator (html,css & React js) </h3>
+                  <p>
+                    This a New Calculator. It is Made with html,css and React js.where you can Add, Substract, Multiply
+                    and Divide the Number.
+                  </p>
                   <br />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/caltors/" class="btn"
+                    target="_blank"> Click here
+                  </a>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="wordcount1.PNG" alt="" />
+                  </div>
+                  <h3><strong> Word Count Tool (Bootstrap + React Js) </strong></h3>
+                  <p>
+                    This is New Word Count Tool. It used to count the No. of Words, Characters, Time to Read, Convert
+                    all
+                    Text to Capital, Lowercase and Clear.
+                  </p>
                   <br />
-                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Weight-Conversion-website-or-App/" class="btn"
-                    target="_blank"> Click Here </a>
-                </p>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./mathwebsite.PNG" alt="" />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/wordcount/" class="btn"
+                    target="_blank"> Click
+                    here </a>
                 </div>
-                <h3><strong> Math Website (html+css) </strong></h3>
-                <p>
-                  This is a Simple website which is Made with html and CSS. It is Education website. This website is
-                  Online Tutorial website.
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./educationwebsite.PNG" alt="" />
+                  </div>
+                  <h3> Education Website (html+css+Js) </h3>
+                  <p>
+                    This is a Education Website made with html+css+Js. Where It Include Multiple Pages -
+                    Home,About,Conctact us.
+                    It is Responsive Website. It is Best viewed in All Devices - Desktop,Tablet and Mobiles.
+                  </p>
                   <br />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Html-css-Js-Website/" class="btn"
+                    target="_blank"> Click here </a>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="edutech.PNG" alt="" />
+                  </div>
+                  <h3> E-Courses Website(Bootstrap) </h3>
+                  <p>
+                    This a E-Course website which is Made with Bootstrape. It is Responsive Website. It is Best viewed
+                    in
+                    All Devices - Desktop,Tablet and Mobiles.
+                  </p>
                   <br />
-                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/SingleWebsite/" class="btn" target="_blank">
-                    Click Here </a>
-                </p>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./calculator.PNG" alt="" />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
+                    target="_blank"> Click here </a>
                 </div>
-                <h3> Calculator (html,css & React js) </h3>
-                <p>
-                  This a New Calculator. It is Made with html,css and React js.where you can Add, Substract, Multiply
-                  and Divide the Number.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/caltors/" class="btn" target="_blank"> Click here
-                </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="wordcount1.PNG" alt="" />
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./kafeneproject.PNG" alt="" />
+                  </div>
+                  <h3> kafeneproject </h3>
+                  <p>
+                    This Project consist of Signin and logout page.Order page, Product page and users page with filter
+                    functionality and search functionality.
+                  </p>
+                  <br />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
+                    target="_blank"> Click here </a>
                 </div>
-                <h3><strong> Word Count Tool (Bootstrap + React Js) </strong></h3>
-                <p>
-                  This is New Word Count Tool. It used to count the No. of Words, Characters, Time to Read, Convert all
-                  Text to Capital, Lowercase and Clear.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/wordcount/" class="btn" target="_blank"> Click
-                  here </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./educationwebsite.PNG" alt="" />
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./movies.PNG" alt="" />
+                  </div>
+                  <h3> Movie React Js App </h3>
+                  <p>
+                    This is Movie App with Search functionality.Api used.useState and useEffect used.
+                  </p>
+                  <br />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
+                    target="_blank"> Click here </a>
                 </div>
-                <h3> Education Website (html+css+Js) </h3>
-                <p>
-                  This is a Education Website made with html+css+Js. Where It Include Multiple Pages -
-                  Home,About,Conctact us.
-                  It is Responsive Website. It is Best viewed in All Devices - Desktop,Tablet and Mobiles.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/Html-css-Js-Website/" class="btn"
-                  target="_blank"> Click here </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="edutech.PNG" alt="" />
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./adminpanel.PNG" alt="" />
+                  </div>
+                  <h3> Basic Admin Panel </h3>
+                  <p>
+                    This is Basic Admin Panel with search functionality.On Click Details on rigth side bar.Api is used.
+                  </p>
+                  <br />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/"
+                    target="_blank" class="btn"> Click here </a>
                 </div>
-                <h3> E-Courses Website(Bootstrap) </h3>
-                <p>
-                  This a E-Course website which is Made with Bootstrape. It is Responsive Website. It is Best viewed in
-                  All Devices - Desktop,Tablet and Mobiles.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
-                  target="_blank"> Click here </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./kafeneproject.PNG" alt="" />
-                </div>
-                <h3> kafeneproject </h3>
-                <p>
-                   This Project consist of Signin and logout page.Order page, Product page and users page with filter functionality and search functionality.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
-                  target="_blank"> Click here </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./movies.PNG" alt="" />
-                </div>
-                <h3> Movie React Js App </h3>
-                <p>
-                   This is Movie App with Search functionality.Api used.useState and useEffect used.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
-                  target="_blank"> Click here </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./adminpanel.PNG" alt="" />
-                </div>
-                <h3> Basic Admin Panel </h3>
-                <p>
-                   This is Basic Admin Panel with search functionality.On Click Details on rigth side bar.Api is used.                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/"
-                  target="_blank" class="btn"> Click here </a>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="team">
-                <div class="img-cover">
-                  <img src="./texttospeech.PNG" alt="" />
-                </div>
-                <h3> Text to Speech </h3>
-                <p>
+              </li>
+              <li class="glide__slide">
+                <div class="team">
+                  <div class="img-cover">
+                    <img src="./texttospeech.PNG" alt="" />
+                  </div>
+                  <h3> Text to Speech </h3>
+                  <p>
                     This is a Text to Speech tool.
-                </p>
-                <br />
-                <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
-                  target="_blank" > Click here </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="title">
-      <h1>Contact me</h1>
-    </div>
-
-    <div class="contact-center container">
-      <div class="left" data-aos="fade-down-right" data-aos-duration="2000">
-        <h2>Get in Touch</h2>
-        <p>
-          If you have an idea or if you want to collab and work on some project. I'd be happy to know and work. Let's
-          get in touch. Let's Build something cool together.
-        </p>
-        <div>
-          <span class="icon"><i class="fas fa-user"></i></span>
-          <span class="content">
-            <h3>Name</h3>
-            <span> Avinash Bawge </span>
-          </span>
-        </div>
-
-        <div>
-          <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-          <span class="content">
-            <h3>Address</h3>
-            <span> Bidar, Karnataka </span>
-          </span>
-        </div>
-
-        <div>
-          <span class="icon"><i class="fas fa-envelope"></i></span>
-          <span class="content">
-            <h3>Email</h3>
-            <span>avi.bawge9@gmail.com</span>
-          </span>
-        </div>
-      </div>
-      <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
-        <form onsubmit="sendEmail()" class="form">
-          <h2>Message me</h2>
-          <div>
-            <input type="text" placeholder="Name" />
-            <input type="email" id="email" placeholder="Email" />
+                  </p>
+                  <br />
+                  <a style="color: aliceblue;" href="https://avinashbawage.github.io/Bootstrap.Edn.website/" class="btn"
+                    target="_blank"> Click here </a>
+                </div>
+              </li>
+            </ul>
           </div>
-          <input type="text" placeholder="Subject" />
-          <textarea cols="10" rows="10" placeholder="Describe Project"></textarea>
-           <button class="btn" type="submit" onclick="sendEmail()">Submit</button>
-          <!-- <a href="#" class="btn">Send message</a> -->
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>Created By <span>AB Developer</span> | &copy; 2023 All rights reserved.</p>
-  </footer>
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="title">
+        <h1>Contact me</h1>
+      </div>
+
+      <div class="contact-center container">
+        <div class="left" data-aos="fade-down-right" data-aos-duration="2000">
+          <h2>Get in Touch</h2>
+          <p>
+            If you have an idea or if you want to collab and work on some project. I'd be happy to know and work. Let's
+            get in touch. Let's Build something cool together.
+          </p>
+          <div>
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="content">
+              <h3>Name</h3>
+              <span> Avinash Bawge </span>
+            </span>
+          </div>
+
+          <div>
+            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+            <span class="content">
+              <h3>Address</h3>
+              <span> Bidar, Karnataka </span>
+            </span>
+          </div>
+
+          <div>
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <span class="content">
+              <h3>Email</h3>
+              <span>avi.bawge9@gmail.com</span>
+            </span>
+          </div>
+        </div>
+        <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
+          <form onsubmit="sendEmail()" class="form">
+            <h2>Message me</h2>
+            <div>
+              <input type="text" placeholder="Name" />
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <input type="text" placeholder="Subject" />
+            <textarea cols="10" rows="10" placeholder="Describe Project"></textarea>
+            <button class="btn" type="submit" onclick="sendEmail()">Submit</button>
+            <!-- <a href="#" class="btn">Send message</a> -->
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Created By <span>AB Developer</span> | &copy; 2023 All rights reserved.</p>
+    </footer>
 
 
-  <!-- AOS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <!-- Typeit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-  <!-- Glidejs -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-  <!-- Custom Script -->
-  <script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Typeit -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Glidejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <!-- Custom Script -->
+    <script>
 
-    const mydetails =[ 
-           { 
-            id:1,
-            title:"card1",
-            image:"profile.jpg"           
-             
-           }
-     ]
+      const mydetails = [
+        {
+          id: 1,
+          title: "card1",
+          image: "profile.jpg"
 
-    function timeCount() {
+        }
+      ]
+
+      function timeCount() {
+        // var today = new Date();
+
+        // var day = today.getDate();
+        // var month = today.getMonth() + 1;
+        // var year = today.getFullYear();
+
+        // var hour = today.getHours();
+        // if (hour < 10) hour = "0" + hour;
+
+        // var minute = today.getMinutes();
+        // if (minute < 10) minute = "0" + minute;
+
+        // var second = today.getSeconds();
+        // if (second < 10) second = "0" + second;
+
+        // document.getElementById("clock").innerHTML =
+        //   day + "/" + month + "/" + year + " " + hour + ":" + minute + ":" + second;
+
+        // document.getElementById("clock").innerHTML =
+        //   ` <b>March 2021 to ${day}/ ${month}/ ${year} Till Now ${hour} ${minute} ${second} </b>   `
+
+
+
+        setTimeout("timeCount()", 1000);
+      }
+
+
+      function getDateDifference(startDate, todaysdate) {
+        const start = new Date(startDate);
+        const end = new Date(todaysdate);
+        const diff = end.getTime() - start.getTime();
+        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+        const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+        const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+        return { years, months, days };
+
+
+
+
+      }
+
+
+
+      let currentDate = new Date();
+      // Gets current year, month and day
+      let year = currentDate.getFullYear();
+      let month = currentDate.getMonth() + 1;
+      let day = currentDate.getDate();
+
+      let todaysdate = year + "-" + month + "-" + day
+
+      let todaysdates = day + "-" + month + "-" + year
+
+
       var today = new Date();
 
-      var day = today.getDate();
-      var month = today.getMonth() + 1;
-      var year = today.getFullYear();
+      var hours = today.getHours();
+      if (hours < 10) hours = "0" + hours;
 
-      var hour = today.getHours();
-      if (hour < 10) hour = "0" + hour;
+      var minutes = today.getMinutes();
+      if (minutes < 10) minutes = "0" + minutes;
 
-      var minute = today.getMinutes();
-      if (minute < 10) minute = "0" + minute;
-
-      var second = today.getSeconds();
-      if (second < 10) second = "0" + second;
-
-      // document.getElementById("clock").innerHTML =
-      //   day + "/" + month + "/" + year + " " + hour + ":" + minute + ":" + second;
-      
-        document.getElementById("clock").innerHTML =
-        ` <b>March 2021 to ${day}/ ${month}/ ${year} Till Now ${hour} ${minute} ${second} </b>   `
-       
+      var seconds = today.getSeconds();
+      if (seconds < 10) seconds = "0" + seconds;
 
 
-      setTimeout("timeCount()", 1000);
-    }
+      // console.log("first", todaysdate)
 
- 
+      // Example usage:
+      const startDate = "2021-03-28";
+      // const todaysdate = "2023-02-15";
+      const dateDifference = getDateDifference(startDate, todaysdate);
+
+      console.log("Experience", dateDifference); // Output: { years: 2, months: 1, days: 14 }
+
+      document.getElementById("clock").innerHTML =
+        ` <b>28-March-2021 to  ${todaysdates}  </b>  Total Experience :${dateDifference.years}years, ${dateDifference.months} months , ${dateDifference.days}days  `
+
+      setTimeout("getDateDifference()", 1000);
 
 
-
-  </script>
-  <script src="index.js"></script>
-  </body>
+    </script>
+    <script src="index.js"></script>
+</body>
 
 </html>
