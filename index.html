@@ -31,6 +31,15 @@
       display: inline-block;
       font-size: 16px;
     }
+
+    .quotes {
+      padding: 20px 0px;
+      text-align: center;
+      font-size: 20px;
+      color: #8342F9;
+      text-shadow: 1px 1px black;
+      width: 100%;
+    }
   </style>
 
   <script src="https://smtpjs.com/v3/smtp.js">
@@ -483,6 +492,10 @@
         </div>
       </div>
     </section>
+    <div class="container quotes">
+      “You learn more from failure than from success. Don’t let it stop you. Failure builds character.”
+
+    </div>
 
     <footer>
       <p>Created By <span>AB Developer</span> | &copy; 2023 All rights reserved.</p>
@@ -499,6 +512,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <!-- Custom Script -->
     <script>
+
+      const url = 'https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&count=10';
+      const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': '9d6ce66025msh2b1cbe81c8741abp1c7815jsn4b41dd5817f7',
+          'X-RapidAPI-Host': 'andruxnet-random-famous-quotes.p.rapidapi.com'
+        }
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+
+
+        const quotesDiv = document.querySelector('.quotes');
+        quotesDiv.textContent = result;
+
+        console.log("first", result)
+      } catch (error) {
+        console.error(error);
+      }
+
+
+
+
 
       const mydetails = [
         {
