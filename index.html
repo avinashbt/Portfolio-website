@@ -32,11 +32,15 @@
       font-size: 16px;
     }
 
-    .quotes {
-      font-size: 20px;
-      color: #8342F9;
+    .notification {
+      background-color: yellow;
       text-align: center;
+      color: black;
       padding: 10px;
+    }
+
+    .notification span {
+      color: green;
     }
   </style>
 
@@ -75,9 +79,10 @@
 
 <body onload="timeCount();">
 
-
-
   <a>
+    <div class="notification"> Serving Notice Period Last day Working @Linkfields: <span> <u>12 Sept 2023 !!!</u>
+      </span>
+    </div>
     <!-- Header -->
     <header id="home" class="header">
       <!-- Navigation -->
@@ -129,7 +134,7 @@
         <h3>Hello, my name is</h3>
         <h1>Avinash Bawage</h1>
         <h4>And I'm a <span id="type1"></span></h4>
-        <a href="https://drive.google.com/file/d/1zA0ngrBSwGP0TvOLbBj-vVFP7kN9gW34/view?usp=sharing">Hire me</a>
+        <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing">Download Resume</a>
       </div>
 
       <img class="banner" src="./bg.png" alt="" />
@@ -163,10 +168,8 @@
               id="clock"></span> . Skills I Know is html, Css,
             Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)
           </p>
-
-          <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing">
-            class="btn">Download CV
-          </a>
+          <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing"
+            class="btn">Download CV</a>
         </div>
 
       </div>
@@ -261,9 +264,7 @@
             Hi Sir, I am Avinash. I am web Developer and Digital Marketer. I am Good in Creating website with Boostrap.
             Skills I Know html,css,Javascript,Bootstrap,React js, Node Js and MySQL. I am Looking for Job on React JS.
           </p>
-
           <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing" class="btn">Read
-
             more</a>
         </div>
       </div>
@@ -333,7 +334,6 @@
               <li class="glide__slide">
                 <div class="team">
                   <div class="img-cover">
-
                     <img src="./calculator.PNG" alt="" />
                   </div>
                   <h3> Calculator (html,css & React js) </h3>
@@ -459,6 +459,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section class="section contact" id="contact">
       <div class="title">
         <h1>Contact me</h1>
@@ -510,12 +511,10 @@
         </div>
       </div>
     </section>
-    <div class="container quotes">
-      “You learn more from failure than from success. Don’t let it stop you. Failure builds character.”
+
+    <div class="projects">
 
     </div>
-
-
 
     <footer>
       <p>Created By <span>AB Developer</span> | &copy; 2023 All rights reserved.</p>
