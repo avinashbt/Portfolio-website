@@ -31,6 +31,17 @@
       display: inline-block;
       font-size: 16px;
     }
+
+    .notification {
+      background-color: yellow;
+      text-align: center;
+      color: black;
+      padding: 10px;
+    }
+
+    .notification span {
+      color: green;
+    }
   </style>
 
   <script src="https://smtpjs.com/v3/smtp.js">
@@ -68,9 +79,10 @@
 
 <body onload="timeCount();">
 
-
-
   <a>
+    <div class="notification"> Serving Notice Period Last day Working @Linkfields: <span> <u>12 Sept 2023 !!!</u>
+      </span>
+    </div>
     <!-- Header -->
     <header id="home" class="header">
       <!-- Navigation -->
@@ -499,6 +511,10 @@
         </div>
       </div>
     </section>
+
+    <div class="projects">
+
+    </div>
 
     <footer>
       <p>Created By <span>AB Developer</span> | &copy; 2023 All rights reserved.</p>
