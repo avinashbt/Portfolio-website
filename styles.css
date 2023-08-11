@@ -46,6 +46,37 @@ li {
   margin: 0 auto;
 }
 
+/* logo css */
+
+.logo {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  position: relative;
+}
+
+.logo-text {
+  display: inline-block;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+    color: orange;
+  }
+  60% {
+    transform: translateY(-10px);
+    color: palegreen;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container {
     padding: 0 3rem;
@@ -104,7 +135,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #8342F9;
+  background-color: #8342f9;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -122,7 +153,7 @@ li {
 
 .logo h1 span {
   font-weight: bold;
-  color: #8342F9;
+  color: #8342f9;
 }
 
 .nav-list {
@@ -143,7 +174,7 @@ li {
 
 .nav-link:hover {
   border-radius: 0.3rem;
-  background-color: #8342F9;
+  background-color: #8342f9;
 }
 
 .top-nav {
@@ -175,7 +206,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #8342F9;
+    background-color: #8342f9;
     padding: 1rem 1.6rem;
   }
 
@@ -248,7 +279,7 @@ li {
   font-size: 2rem;
 }
 .hero h4 span {
-  color: #8342F9;
+  color: #8342f9;
   text-decoration: underline;
 }
 
@@ -256,8 +287,8 @@ li {
 .hero a:visited {
   display: inline-block;
   padding: 0.8rem 2.5rem;
-  border: 1px solid #8342F9;
-  background-color: #8342F9;
+  border: 1px solid #8342f9;
+  background-color: #8342f9;
   color: #fff;
   margin-top: 2rem;
 }
@@ -315,7 +346,7 @@ li {
 }
 
 .icons span:hover {
-  color: #8342F9;
+  color: #8342f9;
 }
 
 @media only screen and (max-width: 567px) {
@@ -359,7 +390,7 @@ li {
   left: 50%;
   bottom: -20%;
   transform: translate(-50%, -50%);
-  background-color: #8342F9;
+  background-color: #8342f9;
   width: 50%;
   height: 0.4rem;
   z-index: 1;
@@ -382,16 +413,16 @@ li {
 }
 
 .right h1 span {
-  color: #8342F9;
+  color: #8342f9;
 }
 
 a.btn {
   display: inline-block;
   padding: 1rem 2rem;
- 
-  color: #8342F9;
+
+  color: #8342f9;
   border-radius: 0.5rem;
-  border: 2px solid #8342F9;
+  border: 2px solid #8342f9;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   transition: all 300ms ease-in-out;
 }
@@ -400,7 +431,7 @@ a.btn:hover {
   transform: translateY(-3px);
   background-color: transparent;
   color: inherit;
-  color: #8342F9;
+  color: #8342f9;
 }
 
 a.btn:active {
@@ -467,7 +498,7 @@ a.btn:active {
 }
 
 .service span {
-  color: #8342F9;
+  color: #8342f9;
   font-size: 4rem;
   transition: all 300ms ease-in-out;
 }
@@ -483,7 +514,7 @@ a.btn:active {
 }
 
 .service:hover {
-  background-color: #8342F9;
+  background-color: #8342f9;
 }
 
 .service:hover span {
@@ -511,7 +542,7 @@ a.btn:active {
 }
 
 .skills-box .skills-bar {
-  background-color: #8342F9;
+  background-color: #8342f9;
   height: 0.4rem;
 }
 
@@ -576,9 +607,9 @@ a.btn:active {
 .team .img-cover {
   overflow: hidden;
   border-radius: 5px;
-  border: 4px solid #8342F9;   
-   width: 100%;
-   height: 100%;
+  border: 4px solid #8342f9;
+  width: 100%;
+  height: 100%;
 
   margin: 0 auto;
   transition: all 300ms ease-in-out;
@@ -603,7 +634,6 @@ a.btn:active {
 
 .team:hover {
   border-bottom: 4px solid #fff;
- 
 }
 
 .team:hover .img-cover {
@@ -639,7 +669,7 @@ a.btn:active {
 .left .icon {
   margin-right: 2rem;
   font-size: 2.3rem;
-  color: #8342F9;
+  color: #8342f9;
 }
 
 .form h2 {
@@ -703,14 +733,14 @@ footer p {
 }
 
 footer p span {
-  color: #8342F9;
+  color: #8342f9;
 }
 
-a { color: white; }
+a {
+  color: white;
+}
 
- 
-
-.btn:hover{
+.btn:hover {
   color: aqua;
   background-color: aqua;
 }
