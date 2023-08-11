@@ -58,6 +58,7 @@ li {
   display: inline-block;
   position: relative;
   animation: bounce 2s infinite;
+  /* color: white; */
 }
 
 @keyframes bounce {
@@ -69,11 +70,11 @@ li {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-20px);
+    /* transform: translateY(-20px); */
     color: orange;
   }
   60% {
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
     color: palegreen;
   }
 }
