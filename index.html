@@ -497,16 +497,17 @@
           </div>
         </div>
         <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
-          <form onsubmit="submitForm(event)" class="form" id="contactForm">
+          <!-- <form onsubmit="submitForm(event)" class="form" id="contactForm"> -->
+          <form class="form" method="post" id="frmContact">
             <h2>Message me</h2>
             <div>
-              <input type="text" id="name" placeholder="Name" />
-              <input type="email" id="email" placeholder="Email" />
+              <input type="text" name="fullname" id="fullname" placeholder="Name" required />
+              <input type="email" name="email" id="email" placeholder="Email" required />
             </div>
-            <input type="text" id="subject" placeholder="Subject" /> <!-- Fix the input type here -->
-            <textarea cols="10" rows="10" id="description" placeholder="Describe Project"></textarea>
+            <input type="text" name="subject" id="subject" placeholder="Subject" /> <!-- Fix the input type here -->
+            <textarea cols="10" rows="10" name="message" id="message" placeholder="Message"></textarea>
             <!-- Use id "description" -->
-            <button class="btn" type="submit">Submit</button>
+            <button type="submit" name="submit">Submit</button>
           </form>
         </div>
       </div>
@@ -625,70 +626,39 @@
 
     </script>
 
-    <script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+      import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
+      // Paste the code from Firebase
       const firebaseConfig = {
-        apiKey: "AIzaSyCMQKh9pmXwbPylV0csAeM3s_8QxwFToDk",
-        authDomain: "myportfoliowebsite-ff64f.firebaseapp.com",
-        databaseURL: "https://myportfoliowebsite-ff64f-default-rtdb.firebaseio.com",
-        projectId: "myportfoliowebsite-ff64f",
-        storageBucket: "myportfoliowebsite-ff64f.appspot.com",
-        messagingSenderId: "690574587831",
-        appId: "1:690574587831:web:e81e3154793e2f6d3ada32",
-        measurementId: "G-X2PQF0KKMB"
+        apiKey: "AIzaSyDPqUppaM_cINaQPUjk79_oNWHvses5mY0",
+        authDomain: "webapp-5ff55.firebaseapp.com",
+        projectId: "webapp-5ff55",
+        storageBucket: "webapp-5ff55.appspot.com",
+        messagingSenderId: "645643836728",
+        appId: "1:645643836728:web:3797fc8ee6a64023daf5cd",
+        measurementId: "G-H5PJRHC1BQ"
       };
       // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
 
+      // Get a reference to the database service
+      const db = getDatabase(app);
 
-      firebase.initializeApp(firebaseConfig);
-
-      // Reference messages collection
-      var messagesRef = firebase.database().ref('messages');
-
-      // Listen for form submit
-      document.getElementById('contactForm').addEventListener('submit', submitForm);
-
-      // Submit form
-      function submitForm(e) {
+      document.getElementById('frmContact').addEventListener('submit', function (e) {
         e.preventDefault();
-
-        //Get value
-        var name = getInputVal('name');
-        var description = getInputVal('description');
-        var email = getInputVal('email');
-        var subject = getInputVal('subject');
-
-        // Save message
-        saveMessage(name, description, email, subject);
-
-        // Show alert
-        document.querySelector('.alert').style.display = 'block';
-
-        // Hide alert after 3 seconds
-        setTimeout(function () {
-          document.querySelector('.alert').style.display = 'none';
-        }, 3000);
-
-        // Clear form
-        document.getElementById('contactForm').reset();
-      }
-
-      // Function to get form value
-      function getInputVal(id) {
-        return document.getElementById(id).value;
-      }
-
-      // Save message to firebase
-      function saveMessage(name, description, email, subject) {
-        var newMessageRef = messagesRef.push();
-        newMessageRef.set({
-          name: name,
-          description: description,
-          email: email,
-          subject: subject,
+        set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+          name: document.getElementById('fullname').value,
+          email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
         });
-      }
 
+        alert('Your form is submitted');
+        document.getElementById('frmContact').reset();
+      });
     </script>
     <script src="index.js"></script>
 </body>
