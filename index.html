@@ -497,16 +497,16 @@
           </div>
         </div>
         <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
-          <form onsubmit="sendEmail()" class="form">
+          <form onsubmit="submitForm(event)" class="form" id="contactForm">
             <h2>Message me</h2>
             <div>
-              <input type="text" placeholder="Name" />
+              <input type="text" id="name" placeholder="Name" />
               <input type="email" id="email" placeholder="Email" />
             </div>
-            <input type="text" placeholder="Subject" />
-            <textarea cols="10" rows="10" placeholder="Describe Project"></textarea>
-            <button class="btn" type="submit" onclick="sendEmail()">Submit</button>
-            <!-- <a href="#" class="btn">Send message</a> -->
+            <input type="text" id="subject" placeholder="Subject" /> <!-- Fix the input type here -->
+            <textarea cols="10" rows="10" id="description" placeholder="Describe Project"></textarea>
+            <!-- Use id "description" -->
+            <button class="btn" type="submit">Submit</button>
           </form>
         </div>
       </div>
@@ -622,6 +622,72 @@
 
       setTimeout("getDateDifference()", 1000);
 
+
+    </script>
+
+    <script>
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCMQKh9pmXwbPylV0csAeM3s_8QxwFToDk",
+        authDomain: "myportfoliowebsite-ff64f.firebaseapp.com",
+        databaseURL: "https://myportfoliowebsite-ff64f-default-rtdb.firebaseio.com",
+        projectId: "myportfoliowebsite-ff64f",
+        storageBucket: "myportfoliowebsite-ff64f.appspot.com",
+        messagingSenderId: "690574587831",
+        appId: "1:690574587831:web:e81e3154793e2f6d3ada32",
+        measurementId: "G-X2PQF0KKMB"
+      };
+      // Initialize Firebase
+
+
+      firebase.initializeApp(firebaseConfig);
+
+      // Reference messages collection
+      var messagesRef = firebase.database().ref('messages');
+
+      // Listen for form submit
+      document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+      // Submit form
+      function submitForm(e) {
+        e.preventDefault();
+
+        //Get value
+        var name = getInputVal('name');
+        var description = getInputVal('description');
+        var email = getInputVal('email');
+        var subject = getInputVal('subject');
+
+        // Save message
+        saveMessage(name, description, email, subject);
+
+        // Show alert
+        document.querySelector('.alert').style.display = 'block';
+
+        // Hide alert after 3 seconds
+        setTimeout(function () {
+          document.querySelector('.alert').style.display = 'none';
+        }, 3000);
+
+        // Clear form
+        document.getElementById('contactForm').reset();
+      }
+
+      // Function to get form value
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+
+      // Save message to firebase
+      function saveMessage(name, description, email, subject) {
+        var newMessageRef = messagesRef.push();
+        newMessageRef.set({
+          name: name,
+          description: description,
+          email: email,
+          subject: subject,
+        });
+      }
 
     </script>
     <script src="index.js"></script>
