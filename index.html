@@ -15,6 +15,13 @@
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="styles.css" />
   <style>
+    .inspiringquotes {
+      padding: 40px;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+  <style>
     #clock {
       color: #8342F9;
 
@@ -45,6 +52,24 @@
   </style>
 
   <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+
+  <script>
+    const now = new Date();
+    const hour = now.getHours();
+    let greet;
+
+    if (hour >= 6 && hour < 12) {
+      greet = "Good morning";
+    } else if (hour >= 12 && hour < 17) {
+      greet = "Good afternoon";
+    } else if (hour >= 17 && hour < 24) {
+      greet = "Good evening";
+    } else {
+      greet = "Respected";
+    }
+
+    document.getElementById("greets").textContent = greet;
   </script>
 
   <script>
@@ -80,7 +105,7 @@
 <body onload="timeCount();">
 
   <a>
-    <div class="notification"> Serving Notice Period Last day Working @Linkfields: <span> <u>12 Sept 2023 !!!</u>
+    <div class="notification"> Serving Notice Period Last Working day @Linkfields: <span> <u>12 Sept 2023 !!!</u>
       </span>
     </div>
     <!-- Header -->
@@ -163,7 +188,8 @@
         <div class="right" data-aos="fade-left" data-aos-duration="2000">
           <h1>I'm Avinash Bawage a <span id="type2"></span></h1>
           <p>
-            Hi Sir/Mam, I am Avinash Bawage. I am a web Developer and Digital Marketer(FreeLancing). 1+ year Experience
+            Hi <span id="greets"> </span> Sir/Mam, I am Avinash Bawage. I am a web Developer and Digital
+            Marketer(FreeLancing). 1+ year Experience
             in web Development From <b> </b> <b> <span id="dates"></span> </b> <span id="times"> </span> <span
               id="clock"></span> . Skills I Know is html, Css,
             Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)
@@ -459,6 +485,18 @@
       </div>
     </section>
 
+    <section>
+      <div class="inspiringquotes">
+        <div>
+          “We all need people who will give us feedback. That’s how we improve.”
+        </div>
+        <div>
+          ― Bill Gates
+
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="section contact" id="contact">
       <div class="title">
@@ -579,9 +617,6 @@
         const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
         return { years, months, days };
 
-
-
-
       }
 
 
@@ -660,6 +695,7 @@
         document.getElementById('frmContact').reset();
       });
     </script>
+
     <script src="index.js"></script>
 </body>
 
