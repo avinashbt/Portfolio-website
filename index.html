@@ -556,7 +556,7 @@
     </div>
 
     <footer>
-      <p>Created By <span>AB Developer</span> | &copy; 2023 All rights reserved.</p>
+      <p>Created By <span>AB Developer</span> | &copy; <span id="yearid"> </span>  All rights reserved.</p>
     </footer>
 
 
@@ -570,7 +570,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <!-- Custom Script -->
     <script>
-
+const d = new Date();
+let years = d.getFullYear();
+document.getElementById("yearid").innerHTML = years;
       const mydetails = [
         {
           id: 1,
@@ -696,7 +698,10 @@
       });
     </script>
 
-    <script src="index.js"></script>
+    <script src="index.js">
+
+      
+    </script>
 </body>
 
 </html>
