@@ -401,6 +401,7 @@ li {
   height: 40rem;
   max-width: 35rem;
   object-fit: cover;
+  transform: scaleX(-1);
 }
 
 .right h1 {
