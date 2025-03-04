@@ -191,7 +191,7 @@
             Hi <span id="greets"> </span> Sir/Mam, I am Avinash Bawage. I am a web App Developer and Digital
             Marketer(FreeLancing). I have <span id="times"> </span> <span
               id="clock"></span>  Experience
-            in web Development From <b> </b> <b> <span id="dates"></span> </b> . Skills I Know is html, Css,
+            in web Development From  <b> <span id="datefrom"> </span> </b> <b> </b> <b> <span id="dates"></span> </b> . Skills I Know is html, Css,
             Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)
           </p>
           <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing"
@@ -656,8 +656,8 @@ document.getElementById("yearid").innerHTML = years;
       console.log("Experience", dateDifference); // Output: { years: 2, months: 1, days: 14 }
 
       document.getElementById("clock").innerHTML =
-        ` <b>28-May-2021 to  ${todaysdates}  </b>  Total Experience :${dateDifference.years}years, ${dateDifference.months} months , ${dateDifference.days}days  `
-
+        `    ${dateDifference.years}years, ${dateDifference.months} months , ${dateDifference.days}days   `
+      document.getElementById("datefrom").innerHTML = `<b>28-May-2021 to  ${todaysdates}  </b>`
       setTimeout("getDateDifference()", 1000);
 
 
