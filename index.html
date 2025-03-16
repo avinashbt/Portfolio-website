@@ -535,18 +535,17 @@
           </div>
         </div>
         <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
-          <!-- <form onsubmit="submitForm(event)" class="form" id="contactForm"> -->
-          <form class="form" method="post" id="frmContact">
-            <h2>Message me</h2>
-            <div>
-              <input type="text" name="fullname" id="fullname" placeholder="Name" required />
-              <input type="email" name="email" id="email" placeholder="Email" required />
-            </div>
-            <input type="text" name="subject" id="subject" placeholder="Subject" /> <!-- Fix the input type here -->
-            <textarea cols="10" rows="10" name="message" id="message" placeholder="Message"></textarea>
-            <!-- Use id "description" -->
-            <button type="submit" name="submit">Submit</button>
-          </form>
+          <!-- <form onsubmit="submitForm(event)" class="form" id="contactForm" > -->
+        <form class="form" method="post" id="frmContact" action="/contact">
+    <h2>Message me</h2>
+    <div>
+        <input type="text" name="fullname" id="fullname" placeholder="Name" required />
+        <input type="email" name="email" id="email" placeholder="Email" required />
+    </div>
+    <input type="text" name="subject" id="subject" placeholder="Subject" />
+    <textarea cols="10" rows="10" name="message" id="message" placeholder="Message"></textarea>
+    <button type="submit" name="submit">Submit</button>
+</form>
         </div>
       </div>
     </section>
