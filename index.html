@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Avinash Bawage | Web Developer & React JS Engineer</title>
+  <title>Avinash Bawage | Web Developer & React Engineer</title>
 
   <meta name="description"
     content="Avinash Bawage is a Web Developer & React JS Engineer from Hyderabad. Creator of SpeedometerLive.online & InstantAIArticle.blog. Skilled in HTML, CSS, JavaScript, React, Node.js, PHP, MySQL.">
@@ -15,7 +14,7 @@
   <meta name="author" content="Avinash Bawage">
   <meta name="robots" content="index, follow">
 
-  <!-- ================= OPEN GRAPH ================= -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Avinash Bawage | Web Developer Portfolio">
   <meta property="og:description"
     content="Explore live projects, SaaS platforms, and modern web applications built by Avinash Bawage.">
@@ -23,20 +22,42 @@
   <meta property="og:url" content="https://avinashbt.github.io">
   <meta property="og:type" content="website">
 
-  <!-- ================= TWITTER ================= -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ================= FAVICON ================= -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon" />
 
-  <!-- ================= LIBRARIES ================= -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8342f9',
+            'primary-dark': '#6d2fd6',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- ================= SCHEMA ================= -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,576 +71,657 @@
     ]
   }
   </script>
-
- 
- 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <!-- Glidejs -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    .inspiringquotes {
-      padding: 40px;
-      font-size: 20px;
-      text-align: center;
-    }
-  </style>
-  <style>
-    #clock {
-      color: #8342F9;
-
-    }
-
-    button {
-      background-color: #8342F9;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-    }
-
-    .notification {
-      background-color: yellow;
-      text-align: center;
-      color: black;
-      padding: 10px;
-    }
-
-    .notification span {
-      color: green;
-    }
-  </style>
-
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
-
-  <script>
-    const now = new Date();
-    const hour = now.getHours();
-    let greet;
-
-    if (hour >= 6 && hour < 12) {
-      greet = "Good morning";
-    } else if (hour >= 12 && hour < 17) {
-      greet = "Good afternoon";
-    } else if (hour >= 17 && hour < 24) {
-      greet = "Good evening";
-    } else {
-      greet = "Respected";
-    }
-
-    document.getElementById("greets").textContent = greet;
-  </script>
-
-  <script>
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "avi.bawge9@gmail.com",
-        Password: "password",
-        To: 'avi.bawge9@gmail.com',
-        From: document.getElementById("email").value,
-        Subject: "The Messages",
-        Body: "New Contact Form Enquiry"
-      }).then(
-        message => alert(message)
-      );
-    }
-  </script>
-  <script>
-    const myTimeout = () => (setTimeout(newspeech, 1000));
-    function newspeech() {
-      var msg = new SpeechSynthesisUtterance();
-      msg.text = "Hello, my name is Avinash Bawaagee. I am a web developer";
-      window.speechSynthesis.speak(msg);
-    }
-    // window.onload = newspeech;
-
-    myTimeout();
-  </script>
-
-  <title>Portfolio Website</title>
 </head>
 
 <body onload="timeCount();">
 
-  <a>
-   <!--  <div class="notification"> Serving Notice Period Last Working day @Linkfields: <span> <u>12 Sept 2023 !!!</u>
-      </span>
-    </div> -->
-    <!-- Header -->
-    <header id="home" class="header">
-      <!-- Navigation -->
-      <nav class="nav">
-        <div class="navigation container">
-          <div class="logo">
-            <h1> <span class="logo-text">AB Developer</span></h1>
-          </div>
+  <!-- Header -->
+  <header id="home" class="header">
+    <div class="hero-bg-gradient"></div>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation container">
+        <div class="logo">
+          <h1><span class="logo-text">AB Developer</span></h1>
+        </div>
 
-          <div class="menu">
-            <div class="top-nav">
-              <div class="logo">
-                <h1>AB Developer<span>.</span></h1>
-              </div>
-              <div class="close">
-                <i class="fas fa-times"></i>
-              </div>
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+              <h1>AB Developer<span>.</span></h1>
             </div>
-
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a href="#home" class="nav-link scroll-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link scroll-link">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="#services" class="nav-link scroll-link">Services</a>
-              </li>
-              <li class="nav-item">
-                <a href="#skills" class="nav-link scroll-link">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a href="#teams" class="nav-link scroll-link">My Projects</a>
-              </li>
-              <li>
-                <a href="https://github.com/avinashbt" class="nav-link scroll-link">Github</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contact" class="nav-link scroll-link">Contact us</a>
-              </li>
-            </ul>
+            <div class="close">
+              <i class="fas fa-times"></i>
+            </div>
           </div>
 
-          <div class="hamburger">
-            <i class="fas fa-bars"></i>
-          </div>
-        </div>
-      </nav>
-      <!-- Hero -->
-      <div class="hero">
-        <h3>Hello, my name is</h3>
-        <h1>Avinash Bawage</h1>
-        <h4>And I'm a <span id="type1"></span></h4>
-        <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing">Download Resume</a>
-      </div>
-
-      <img class="banner" src="./bg.png" alt="" />
-
-      <div class="icons">
-        <span><a href="https://github.com/avinashbt" target="_blank"> <i class="fab fa-github"></i> </a> </span>
-        <span><a href="https://www.linkedin.com/in/avinash-bawage-99ba58200/?locale=en_US" target="_blank"><i
-              class="fab fa-linkedin-in"></i></a></span>
-        <span> <a href="https://twitter.com/AvinashBawge"><i class="fab fa-twitter"></i></a></span>
-        <span><a> <i class="fab fa-facebook-f"></i> </a> </span>
-        <span> <a> <i class="fab fa-instagram"></i> </a> </span>
-
-      </div>
-    </header>
-
-    <!-- Main -->
-    <section class="section about" id="about">
-      <div class="title">
-        <h1>About me</h1>
-      </div>
-
-      <div class="about-center container">
-        <div class="left" data-aos="fade-right" data-aos-duration="2000">
-          <img src="./profile1.jpg" alt="" />
-        </div>
-        <div class="right" data-aos="fade-left" data-aos-duration="2000">
-          <h1>I'm Avinash Bawage a <span id="type2"></span></h1>
-          <p>
-            Hi <span id="greets"> </span> Sir/Mam, I am Avinash Bawage. I am a web App Developer and Digital
-            Marketer(FreeLancing). I have <span id="times"> </span> <span
-              id="clock"></span>  Experience
-            in web Development From  <b> <span id="datefrom"> </span> </b> <b> </b> <b> <span id="dates"></span> </b> . Skills I Know is html, Css,
-            Javascript, Bootstrap, React Js (Front End web Developer),Nodejs (Backend) and Database (MySQL)
-          </p>
-          <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing"
-            class="btn">Download CV</a>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link scroll-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link scroll-link">About</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link scroll-link">Services</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link scroll-link">Skills</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link scroll-link">Projects</a></li>
+            <li class="nav-item"><a href="#websites" class="nav-link scroll-link">Websites</a></li>
+            <li class="nav-item"><a href="https://github.com/avinashbt" class="nav-link" target="_blank">Github</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link scroll-link">Contact</a></li>
+          </ul>
         </div>
 
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section theme" id="services">
-      <div class="title">
-        <h1>My Services</h1>
-      </div>
-
-      <div class="services-center container">
-        <div class="service" data-aos="fade-down" data-aos-duration="2000">
-          <span><i class="fab fa-accusoft"></i></span>
-          <h2>Web Design</h2>
-          <p>
-            A website is a collection of web pages and related content that is identified by a common domain name and
-            published on at least one web server.
-          </p>
-        </div>
-
-        <div class="service" data-aos="fade-up" data-aos-duration="2000">
-          <span> <i class="fas fa-blender-phone"></i> </span>
-          <h2>Mobile App Design</h2>
-          <p>
-            A mobile application, also referred to as a mobile app or simply an app, is a computer program or software
-            application designed to run on a mobile device such as a phone, tablet, or watch.
-          </p>
-        </div>
-
-        <div class="service" data-aos="fade-down" data-aos-duration="2000">
-          <span> <i class="fas fa-chart-line"></i></span>
-          <h2>Digital Marketing</h2>
-          <p>
-            Digital Marketing refers to advertising delivered through digital channels such as search engines, websites,
-            social media, email, and mobile apps. Using these online media.
-          </p>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- Skills -->
-    <section class="section skills" id="skills">
-      <div class="title">
-        <h1>My Skills</h1>
+    <!-- Hero -->
+    <div class="hero">
+      <h3>Hello, my name is</h3>
+      <h1>Avinash Bawage</h1>
+      <h4>And I'm a <span id="type1"></span></h4>
+      <div class="hero-buttons">
+        <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing" class="btn btn-primary" target="_blank">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <a href="#contact" class="btn btn-outline scroll-link">Get In Touch</a>
+      </div>
+    </div>
+
+    <img class="banner" src="./bg.png" alt="Developer illustration" />
+
+    <div class="icons">
+      <span><a href="https://github.com/avinashbt" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></span>
+      <span><a href="https://www.linkedin.com/in/avinash-bawage-99ba58200/?locale=en_US" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span>
+      <span><a href="https://twitter.com/AvinashBawge" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></span>
+      <span><a href="mailto:avi.bawge9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></span>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="title">
+      <h1>About Me</h1>
+    </div>
+
+    <div class="about-center container">
+      <div class="left" data-aos="fade-right" data-aos-duration="2000">
+        <div class="profile-wrapper">
+          <img src="./profile1.jpg" alt="Avinash Bawage" />
+          <div class="profile-decoration"></div>
+        </div>
+      </div>
+      <div class="right" data-aos="fade-left" data-aos-duration="2000">
+        <h1>I'm Avinash Bawage, a <span id="type2"></span></h1>
+        <p>
+          Hi, I am Avinash Bawage — a Web App Developer and Digital Marketer.
+          I have <span id="times"></span> <span id="clock"></span> of experience
+          in web development since <b><span id="datefrom"></span></b>.
+          I specialize in building modern, responsive web applications using
+          HTML, CSS, JavaScript, Bootstrap, React.js, Node.js, and MySQL.
+        </p>
+        <div class="about-tags">
+          <span class="tag">React.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">MySQL</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing" class="btn" target="_blank">
+          <i class="fas fa-file-alt"></i> Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section theme" id="services">
+    <div class="title">
+      <h1>My Services</h1>
+    </div>
+
+    <div class="services-center container">
+      <div class="service" data-aos="fade-down" data-aos-duration="2000">
+        <span><i class="fab fa-accusoft"></i></span>
+        <h2>Web Design</h2>
+        <p>
+          Crafting responsive, pixel-perfect websites with clean code and modern UI/UX principles. From landing pages to full web applications.
+        </p>
+        <div class="service-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+        </div>
       </div>
 
-      <div class="skills-center container">
-        <div class="skills-left" data-aos="fade-right" data-aos-duration="2000">
-          <div class="skills-box">
+      <div class="service" data-aos="fade-up" data-aos-duration="2000">
+        <span><i class="fas fa-mobile-alt"></i></span>
+        <h2>Mobile App Design</h2>
+        <p>
+          Building cross-platform mobile experiences with responsive design that works seamlessly across all devices and screen sizes.
+        </p>
+        <div class="service-tags">
+          <span>React Native</span>
+          <span>Responsive</span>
+          <span>PWA</span>
+        </div>
+      </div>
+
+      <div class="service" data-aos="fade-down" data-aos-duration="2000">
+        <span><i class="fas fa-chart-line"></i></span>
+        <h2>Digital Marketing</h2>
+        <p>
+          Data-driven digital marketing strategies including SEO, social media campaigns, and analytics to grow your online presence.
+        </p>
+        <div class="service-tags">
+          <span>SEO</span>
+          <span>Analytics</span>
+          <span>Strategy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="title">
+      <h1>My Skills</h1>
+    </div>
+
+    <div class="skills-center container">
+      <div class="skills-left" data-aos="fade-right" data-aos-duration="2000">
+        <div class="skills-box">
+          <div class="skills-header">
             <h4>HTML5</h4>
-            <div class="skills-ilt">
-              <div class="skills-bar html"></div>
-              <span>95%</span>
-            </div>
+            <span class="skill-percent">95%</span>
           </div>
-          <div class="skills-box">
-            <h4>CSS</h4>
-            <div class="skills-ilt">
-              <div class="skills-bar css"></div>
-              <span>85%</span>
-            </div>
+          <div class="skills-ilt">
+            <div class="skills-bar html"></div>
           </div>
-          <div class="skills-box">
+        </div>
+        <div class="skills-box">
+          <div class="skills-header">
+            <h4>CSS3</h4>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skills-ilt">
+            <div class="skills-bar css"></div>
+          </div>
+        </div>
+        <div class="skills-box">
+          <div class="skills-header">
             <h4>JavaScript</h4>
-            <div class="skills-ilt">
-              <div class="skills-bar javascript"></div>
-              <span>90%</span>
-            </div>
+            <span class="skill-percent">90%</span>
           </div>
-          <div class="skills-box">
+          <div class="skills-ilt">
+            <div class="skills-bar javascript"></div>
+          </div>
+        </div>
+        <div class="skills-box">
+          <div class="skills-header">
             <h4>Bootstrap</h4>
-            <div class="skills-ilt">
-              <div class="skills-bar javascript"></div>
-              <span>90%</span>
-            </div>
+            <span class="skill-percent">90%</span>
           </div>
-          <div class="skills-box">
-            <h4>React Js and Redux </h4>
-            <div class="skills-ilt">
-              <div class="skills-bar css"></div>
-              <span>85%</span>
-            </div>
+          <div class="skills-ilt">
+            <div class="skills-bar bootstrap"></div>
           </div>
-
-
         </div>
-
-        <div class="right" data-aos="fade-left" data-aos-duration="2000">
-          <h3>My creative skills and experience</h3>
-          <p>
-            Hi Sir, I am Avinash. I am Web App Developer and Digital Marketer. I am Good in Creating web app, website with Boostrap.
-            Skills I Know html,css,Javascript,Bootstrap,React js, Node Js and MySQL.  
-          </p>
-          <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing" class="btn">Read
-            more</a>
+        <div class="skills-box">
+          <div class="skills-header">
+            <h4>React.js & Redux</h4>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skills-ilt">
+            <div class="skills-bar react"></div>
+          </div>
+        </div>
+        <div class="skills-box">
+          <div class="skills-header">
+            <h4>Node.js</h4>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skills-ilt">
+            <div class="skills-bar nodejs"></div>
+          </div>
+        </div>
+        <div class="skills-box">
+          <div class="skills-header">
+            <h4>MySQL</h4>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skills-ilt">
+            <div class="skills-bar mysql"></div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Teams -->
-    <section class="section theme" id="teams">
-      <div class="title">
-        <h1>My Projects</h1>
+      <div class="right" data-aos="fade-left" data-aos-duration="2000">
+        <h3>My creative skills & experience</h3>
+        <p>
+          I'm a passionate Web App Developer and Digital Marketer with hands-on experience building real-world projects including SaaS platforms, admin panels, and interactive web applications. I focus on writing clean, maintainable code and creating intuitive user experiences.
+        </p>
+        <div class="skills-experience-grid">
+          <div class="experience-card">
+            <h4>14+</h4>
+            <p>Projects Completed</p>
+          </div>
+          <div class="experience-card">
+            <h4>2+</h4>
+            <p>Live SaaS Products</p>
+          </div>
+          <div class="experience-card">
+            <h4>5+</h4>
+            <p>Technologies</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1VmuOUSJU7ktLe5FLEhQfqUxO3oHJUNSr/view?usp=sharing" class="btn" target="_blank">
+          <i class="fas fa-download"></i> Read More
+        </a>
       </div>
-
-      <div class="teams-center container">
-        <div class="glide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-
-
-
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./unitconversion.PNG" alt="" />
-                  </div>
-                  <h3><strong> Weight Conversion website </strong></h3>
-                  <p>
-                    This website is Made with html,css and JavaScript. It will helps to Convert weight Conversion. Where
-                    a
-                    Person can Enter Number in Pounds. It will show the Results in Grams, Kgs and Ounce
-                    <br />
-                    <br />
-                    <a style="color: aliceblue;"
-                      href="https://avinashbt.github.io/Weight-Conversion-website-or-App/" class="btn"
-                      target="_blank"> Click Here </a>
-                  </p>
-                </div>
-              </li>
-
-<li class="glide__slide">
-  <div class="team">
-    <div class="img-cover">
-      <img src="speedometeronline.png" alt="Speedometer Live Online" />
     </div>
-    <h3><strong>Speedometer Live Online</strong></h3>
-    <p>
-      A real-time GPS-based online speedometer web app.
-      Shows live speed, distance, accuracy, and works on mobile browsers.
-      Built with NextJs.
-    </p>
-    <br />
-    <a style="color: aliceblue;"
-       href="https://speedometerlive.online"
-       class="btn"
-       target="_blank">
-      Visit Website
-    </a>
-  </div>
-</li>
+  </section>
 
-
-<li class="glide__slide">
-  <div class="team">
-    <div class="img-cover">
-      <img src="instantaiarticle.png" alt="Instant AI Article Generator" />
+  <!-- Projects -->
+  <section class="section theme" id="projects">
+    <div class="title">
+      <h1>My Projects</h1>
     </div>
-    <h3><strong>Instant AI Article Generator (SaaS)</strong></h3>
-    <p>
-      A full-stack AI SaaS platform to generate SEO-optimized blog articles.
-      Features login/signup, free & premium plans, payment integration,
-      article limits, and admin controls.
-      <br/><br/>
-      Tech Stack: HTML, CSS, JS, PHP, MySQL, AI API, Cashfree Payments
-    </p>
-    <br />
-    <a style="color: aliceblue;"
-       href="https://instantaiarticle.blog"
-       class="btn"
-       target="_blank">
-      Visit Website
-    </a>
-  </div>
-</li>
 
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./mathwebsite.PNG" alt="" />
-                  </div>
-                  <h3><strong> Math Website (html+css) </strong></h3>
-                  <p>
-                    This is a Simple website which is Made with html and CSS. It is Education website. This website is
-                    Online Tutorial website.
-                    <br />
-                    <br />
-                    <a style="color: aliceblue;" href="https://avinashbt.github.io/SingleWebsite/"  class="btn btn-success"
-                      target="_blank">
-                     <i class="bi bi-broadcast"></i> Live </a>
-                  </p>
+    <div class="teams-center container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="instantaiarticle.png" alt="Instant AI Article Generator" />
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./stunninglandingpage.PNG" alt="" />
+                <div class="team-content">
+                  <h3>Instant AI Article Generator</h3>
+                  <span class="project-badge">SaaS</span>
+                  <p>Full-stack AI SaaS platform for SEO-optimized blog articles with login, payment integration, and admin controls.</p>
+                  <div class="tech-stack">
+                    <span>PHP</span><span>MySQL</span><span>AI API</span>
                   </div>
-                  <h3><strong> Stunning landing Page website (html+css) </strong></h3>
-                  <p>
-                    This is a Simple website which is Made with html and CSS.
-                    <br />
-                    <br />
-                    <a style="color: aliceblue;" href="https://avinashbt.github.io/Stunning_landing_page/"
-                      class="btn btn-success" target="_blank">
-                     <i class="bi bi-broadcast"></i> Live </a>
-                  </p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./calculator.PNG" alt="" />
-                  </div>
-                  <h3> Calculator (html,css & React js) </h3>
-                  <p>
-                    This a New Calculator. It is Made with html,css and React js.where you can Add, Substract, Multiply
-                    and Divide the Number.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/caltors/"  class="btn btn-success"
-                    target="_blank">  <i class="bi bi-broadcast"></i> Live
+                  <a href="https://instantaiarticle.blog" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visit
                   </a>
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="wordcount1.PNG" alt="" />
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="speedometeronline.png" alt="Speedometer Live Online" />
+                </div>
+                <div class="team-content">
+                  <h3>Speedometer Live Online</h3>
+                  <span class="project-badge">Live</span>
+                  <p>Real-time GPS-based speedometer web app showing live speed, distance, and accuracy on mobile browsers.</p>
+                  <div class="tech-stack">
+                    <span>Next.js</span><span>Geolocation API</span>
                   </div>
-                  <h3><strong> Word Count Tool (Bootstrap + React Js) </strong></h3>
-                  <p>
-                    This is New Word Count Tool. It used to count the No. of Words, Characters, Time to Read, Convert
-                    all
-                    Text to Capital, Lowercase and Clear.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/wordcount/" class="btn btn-success"
-                    target="_blank"> 
-                    <i class="bi bi-broadcast"></i> Live
+                  <a href="https://speedometerlive.online" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visit
                   </a>
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./educationwebsite.PNG" alt="" />
-                  </div>
-                  <h3> Education Website (html+css+Js) </h3>
-                  <p>
-                    This is a Education Website made with html+css+Js. Where It Include Multiple Pages -
-                    Home,About,Conctact us.
-                    It is Responsive Website. It is Best viewed in All Devices - Desktop,Tablet and Mobiles.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/Html-css-Js-Website/"  class="btn btn-success"
-                    target="_blank">  <i class="bi bi-broadcast"></i> Live </a>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="calculator.PNG" alt="Calculator App" />
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="edutech.PNG" alt="" />
+                <div class="team-content">
+                  <h3>Calculator App</h3>
+                  <span class="project-badge">React</span>
+                  <p>Modern calculator with add, subtract, multiply, and divide operations. Built with React.js.</p>
+                  <div class="tech-stack">
+                    <span>React.js</span><span>CSS3</span>
                   </div>
-                  <h3> E-Courses Website(Bootstrap) </h3>
-                  <p>
-                    This a E-Course website which is Made with Bootstrape. It is Responsive Website. It is Best viewed
-                    in
-                    All Devices - Desktop,Tablet and Mobiles.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/Bootstrap.Edn.website/"  class="btn btn-success"
-                    target="_blank">  <i class="bi bi-broadcast"></i> Live</a>
+                  <a href="https://avinashbt.github.io/caltors/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./kafeneproject.PNG" alt="" />
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="wordcount1.PNG" alt="Word Count Tool" />
+                </div>
+                <div class="team-content">
+                  <h3>Word Count Tool</h3>
+                  <span class="project-badge">React</span>
+                  <p>Count words, characters, reading time, and convert text case. Built with Bootstrap + React.</p>
+                  <div class="tech-stack">
+                    <span>React.js</span><span>Bootstrap</span>
                   </div>
-                  <h3> kafeneproject </h3>
-                  <p>
-                    This Project consist of Signin and logout page.Order page, Product page and users page with filter
-                    functionality and search functionality.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/Bootstrap.Edn.website/"  class="btn btn-success"
-                    target="_blank">  <i class="bi bi-broadcast"></i> Live</a>
+                  <a href="https://avinashbt.github.io/wordcount/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./movies.PNG" alt="" />
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="unitconversion.PNG" alt="Weight Conversion" />
+                </div>
+                <div class="team-content">
+                  <h3>Weight Conversion Website</h3>
+                  <span class="project-badge">HTML/CSS</span>
+                  <p>Convert weights between pounds, grams, kilograms, and ounces instantly.</p>
+                  <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
                   </div>
-                  <h3> Movie React Js App </h3>
-                  <p>
-                    This is Movie App with Search functionality.Api used.useState and useEffect used.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/Bootstrap.Edn.website/"  class="btn btn-success"
-                    target="_blank">   <i class="bi bi-broadcast"></i> Live</a>
+                  <a href="https://avinashbt.github.io/Weight-Conversion-website-or-App/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./adminpanel.PNG" alt="" />
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="educationwebsite.PNG" alt="Education Website" />
+                </div>
+                <div class="team-content">
+                  <h3>Education Website</h3>
+                  <span class="project-badge">Multi-page</span>
+                  <p>Responsive education website with multiple pages — Home, About, and Contact. Works on all devices.</p>
+                  <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
                   </div>
-                  <h3> Basic Admin Panel </h3>
-                  <p>
-                    This is Basic Admin Panel with search functionality.On Click Details on rigth side bar.Api is used.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/Bootstrap.Edn.website/"
-                    target="_blank"  class="btn btn-success">   <i class="bi bi-broadcast"></i> Live </a>
+                  <a href="https://avinashbt.github.io/Html-css-Js-Website/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
                 </div>
-              </li>
-              <li class="glide__slide">
-                <div class="team">
-                  <div class="img-cover">
-                    <img src="./texttospeech.PNG" alt="" />
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="edutech.PNG" alt="E-Courses Website" />
+                </div>
+                <div class="team-content">
+                  <h3>E-Courses Website</h3>
+                  <span class="project-badge">Bootstrap</span>
+                  <p>Responsive e-learning platform built with Bootstrap. Fully responsive across all devices.</p>
+                  <div class="tech-stack">
+                    <span>Bootstrap</span><span>HTML</span><span>CSS</span>
                   </div>
-                  <h3> Text to Speech </h3>
-                  <p>
-                    This is a Text to Speech tool.
-                  </p>
-                  <br />
-                  <a style="color: aliceblue;" href="https://avinashbt.github.io/Bootstrap.Edn.website/"  class="btn btn-success"
-                    target="_blank">   <i class="bi bi-broadcast"></i> Live</a>
+                  <a href="https://avinashbt.github.io/Bootstrap.Edn.website/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="./movies.PNG" alt="Movie React App" />
+                </div>
+                <div class="team-content">
+                  <h3>Movie React App</h3>
+                  <span class="project-badge">React</span>
+                  <p>Movie search app with API integration using useState and useEffect hooks.</p>
+                  <div class="tech-stack">
+                    <span>React.js</span><span>API</span>
+                  </div>
+                  <a href="https://avinashbt.github.io/Bootstrap.Edn.website/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="./adminpanel.PNG" alt="Admin Panel" />
+                </div>
+                <div class="team-content">
+                  <h3>Admin Panel</h3>
+                  <span class="project-badge">Dashboard</span>
+                  <p>Admin dashboard with search functionality, detail sidebar, and API integration.</p>
+                  <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                  </div>
+                  <a href="https://avinashbt.github.io/Bootstrap.Edn.website/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="./texttospeech.PNG" alt="Text to Speech" />
+                </div>
+                <div class="team-content">
+                  <h3>Text to Speech Tool</h3>
+                  <span class="project-badge">Utility</span>
+                  <p>Text-to-speech conversion tool for accessibility and productivity.</p>
+                  <div class="tech-stack">
+                    <span>JavaScript</span><span>Web Speech API</span>
+                  </div>
+                  <a href="https://avinashbt.github.io/Bootstrap.Edn.website/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="mathwebsite.PNG" alt="Math Website" />
+                </div>
+                <div class="team-content">
+                  <h3>Math Tutorial Website</h3>
+                  <span class="project-badge">HTML/CSS</span>
+                  <p>Online education tutorial website for math learning.</p>
+                  <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span>
+                  </div>
+                  <a href="https://avinashbt.github.io/SingleWebsite/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="glide__slide">
+              <div class="team">
+                <div class="img-cover">
+                  <img src="stunninglandingpage.PNG" alt="Landing Page" />
+                </div>
+                <div class="team-content">
+                  <h3>Stunning Landing Page</h3>
+                  <span class="project-badge">HTML/CSS</span>
+                  <p>Beautiful landing page built with pure HTML and CSS.</p>
+                  <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span>
+                  </div>
+                  <a href="https://avinashbt.github.io/Stunning_landing_page/" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Glide Controls -->
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <div class="quote-content" data-aos="fade-up" data-aos-duration="1500">
+      <i class="fas fa-quote-left quote-icon"></i>
+      <blockquote>
+        "We all need people who will give us feedback. That's how we improve."
+      </blockquote>
+      <cite>— Bill Gates</cite>
+    </div>
+  </section>
+
+  <!-- Our Websites (Tailwind) -->
+  <section id="websites" class="py-20 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <!-- Heading -->
+      <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-4xl font-bold text-white mb-4">Our Live Websites</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Real-world web applications and SaaS products built and deployed in production.</p>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      <!-- Website Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <a href="https://calculatorforall.online" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-calculator text-2xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Calculator For All</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">A comprehensive online calculator for everyday math, unit conversions, and scientific calculations.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="https://speedometerlive.online" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-tachometer-alt text-2xl text-green-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Speedometer Live</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Real-time GPS-based speedometer web app showing live speed, distance, and accuracy on mobile.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="https://whatismycarspeed.in" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-car text-2xl text-orange-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">What Is My Car Speed</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Track your vehicle speed in real-time using GPS. Perfect for monitoring driving speed on any device.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="https://youtubedescriptionextractor.online" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fab fa-youtube text-2xl text-red-500"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">YouTube Description Extractor</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Extract and copy YouTube video descriptions instantly. A handy tool for content creators and marketers.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="https://instantaiarticle.blog" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-robot text-2xl text-purple-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Instant AI Article</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Full-stack AI SaaS platform to generate SEO-optimized blog articles with payment integration.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="https://digitaldany.com" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-globe text-2xl text-cyan-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Digital Dany</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">A full-service digital agency website showcasing web development and digital marketing services.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 7 -->
+        <a href="https://vehiclespeedometer.digitaldany.com" target="_blank" class="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-primary/50 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-bicycle text-2xl text-yellow-400"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">Vehicle Speedometer</h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Real-time vehicle speed tracking tool for cars, bikes, and other vehicles using GPS technology.</p>
+          <div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Visit Website <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- "More Coming Soon" Card -->
+        <div class="flex items-center justify-center bg-gray-800/30 backdrop-blur-sm border-2 border-dashed border-gray-700/50 rounded-2xl p-6 min-h-[280px]" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-center">
+            <div class="flex items-center justify-center w-14 h-14 bg-gray-800 rounded-xl mb-4 mx-auto">
+              <i class="fas fa-plus text-2xl text-gray-500"></i>
+            </div>
+            <p class="text-gray-500 text-lg font-medium">More Projects</p>
+            <p class="text-gray-600 text-sm mt-1">Coming Soon</p>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="inspiringquotes">
-        <div>
-          “We all need people who will give us feedback. That’s how we improve.”
-        </div>
-        <div>
-          ― Bill Gates
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="title">
+      <h1>Contact Me</h1>
+    </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-      <div class="title">
-        <h1>Contact me</h1>
-      </div>
-
-      <div class="contact-center container">
-        <div class="left" data-aos="fade-down-right" data-aos-duration="2000">
-          <h2>Get in Touch</h2>
-          <p>
-            If you have an idea or if you want to collab and work on some project. I'd be happy to know and work. Let's
-            get in touch. Let's Build something cool together.
-          </p>
+    <div class="contact-center container">
+      <div class="left" data-aos="fade-down-right" data-aos-duration="2000">
+        <h2>Get in Touch</h2>
+        <p>
+          Have an idea or want to collaborate on a project? I'd love to hear from you. Let's build something amazing together.
+        </p>
+        <div class="contact-info">
           <div>
             <span class="icon"><i class="fas fa-user"></i></span>
             <span class="content">
               <h3>Name</h3>
-              <span> Avinash Bawge </span>
+              <span>Avinash Bawage</span>
             </span>
           </div>
 
@@ -627,7 +729,7 @@
             <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
             <span class="content">
               <h3>Address</h3>
-              <span> Hyderabad, Telangana, India </span>
+              <span>Hyderabad, Telangana, India</span>
             </span>
           </div>
 
@@ -639,173 +741,141 @@
             </span>
           </div>
         </div>
-        <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
-          <!-- <form onsubmit="submitForm(event)" class="form" id="contactForm" > -->
-        <form class="form" method="post" id="frmContact" action="/contact">
-    <h2>Message me</h2>
-    <div>
-        <input type="text" name="fullname" id="fullname" placeholder="Name" required />
-        <input type="email" name="email" id="email" placeholder="Email" required />
+      </div>
+      <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
+        <form class="form" id="frmContact" action="/contact" method="post">
+          <h2>Send a Message</h2>
+          <div class="form-row">
+            <input type="text" name="fullname" id="fullname" placeholder="Your Name" required />
+            <input type="email" name="email" id="email" placeholder="Your Email" required />
+          </div>
+          <input type="text" name="subject" id="subject" placeholder="Subject" />
+          <textarea cols="10" rows="8" name="message" id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" name="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
     </div>
-    <input type="text" name="subject" id="subject" placeholder="Subject" />
-    <textarea cols="10" rows="10" name="message" id="message" placeholder="Message"></textarea>
-    <button type="submit" name="submit">Submit</button>
-</form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content container">
+      <div class="footer-brand">
+        <h3>AB Developer<span>.</span></h3>
+        <p>Building modern web experiences with clean code and creative design.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home" class="scroll-link">Home</a></li>
+          <li><a href="#about" class="scroll-link">About</a></li>
+          <li><a href="#services" class="scroll-link">Services</a></li>
+          <li><a href="#skills" class="scroll-link">Skills</a></li>
+          <li><a href="#projects" class="scroll-link">Projects</a></li>
+          <li><a href="#websites" class="scroll-link">Websites</a></li>
+          <li><a href="#contact" class="scroll-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="footer-icons">
+          <a href="https://github.com/avinashbt" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/avinash-bawage-99ba58200/?locale=en_US" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/AvinashBawge" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:avi.bawge9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-    </section>
-
-    <div class="projects">
-
     </div>
+    <div class="footer-bottom">
+      <p>Created by <span>AB Developer</span> | &copy; <span id="yearid"></span> All rights reserved.</p>
+    </div>
+  </footer>
 
-    <footer>
-      <p>Created By <span>AB Developer</span> | &copy; <span id="yearid"> </span>  All rights reserved.</p>
-    </footer>
+  <!-- AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- TypeIt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <!-- Glide.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
 
+  <script>
+    // Year
+    document.getElementById("yearid").innerHTML = new Date().getFullYear();
 
-    <!-- AOS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Typeit -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <!-- Glidejs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-    <!-- Custom Script -->
-    <script>
-const d = new Date();
-let years = d.getFullYear();
-document.getElementById("yearid").innerHTML = years;
-      const mydetails = [
-        {
-          id: 1,
-          title: "card1",
-          image: "profile.jpg"
+    // Experience calculation
+    function timeCount() {
+      setTimeout("timeCount()", 1000);
+    }
 
-        }
-      ]
+    function getDateDifference(startDate, todaysdate) {
+      const start = new Date(startDate);
+      const end = new Date(todaysdate);
+      const diff = end.getTime() - start.getTime();
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+      return { years, months, days };
+    }
 
-      function timeCount() {
-        // var today = new Date();
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1;
+    const day = currentDate.getDate();
+    const todaysdate = year + "-" + month + "-" + day;
+    const todaysdates = day + "-" + month + "-" + year;
 
-        // var day = today.getDate();
-        // var month = today.getMonth() + 1;
-        // var year = today.getFullYear();
+    const startDate = "2021-05-28";
+    const dateDifference = getDateDifference(startDate, todaysdate);
 
-        // var hour = today.getHours();
-        // if (hour < 10) hour = "0" + hour;
+    document.getElementById("clock").innerHTML =
+      `${dateDifference.years} years, ${dateDifference.months} months, ${dateDifference.days} days`;
+    document.getElementById("datefrom").innerHTML = `28-May-2021 to ${todaysdates}`;
 
-        // var minute = today.getMinutes();
-        // if (minute < 10) minute = "0" + minute;
+    // Greeting
+    const hour = new Date().getHours();
+    let greet;
+    if (hour >= 6 && hour < 12) greet = "Good morning";
+    else if (hour >= 12 && hour < 17) greet = "Good afternoon";
+    else greet = "Good evening";
+    document.getElementById("greets").textContent = greet;
+  </script>
 
-        // var second = today.getSeconds();
-        // if (second < 10) second = "0" + second;
+  <!-- Firebase Contact Form -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
-        // document.getElementById("clock").innerHTML =
-        //   day + "/" + month + "/" + year + " " + hour + ":" + minute + ":" + second;
+    const firebaseConfig = {
+      apiKey: "AIzaSyDPqUppaM_cINaQPUjk79_oNWHvses5mY0",
+      authDomain: "webapp-5ff55.firebaseapp.com",
+      projectId: "webapp-5ff55",
+      storageBucket: "webapp-5ff55.appspot.com",
+      messagingSenderId: "645643836728",
+      appId: "1:645643836728:web:3797fc8ee6a64023daf5cd",
+      measurementId: "G-H5PJRHC1BQ"
+    };
 
-        // document.getElementById("clock").innerHTML =
-        //   ` <b>May 2021 to ${day}/ ${month}/ ${year} Till Now ${hour} ${minute} ${second} </b>   `
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
 
-
-
-        setTimeout("timeCount()", 1000);
-      }
-
-
-      function getDateDifference(startDate, todaysdate) {
-        const start = new Date(startDate);
-        const end = new Date(todaysdate);
-        const diff = end.getTime() - start.getTime();
-        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
-        const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
-        const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-        return { years, months, days };
-
-      }
-
-
-
-      let currentDate = new Date();
-      // Gets current year, month and day
-      let year = currentDate.getFullYear();
-      let month = currentDate.getMonth() + 1;
-      let day = currentDate.getDate();
-
-      let todaysdate = year + "-" + month + "-" + day
-
-      let todaysdates = day + "-" + month + "-" + year
-
-
-      var today = new Date();
-
-      var hours = today.getHours();
-      if (hours < 10) hours = "0" + hours;
-
-      var minutes = today.getMinutes();
-      if (minutes < 10) minutes = "0" + minutes;
-
-      var seconds = today.getSeconds();
-      if (seconds < 10) seconds = "0" + seconds;
-
-
-      // console.log("first", todaysdate)
-
-      // Example usage:
-      const startDate = "2021-03-28";
-      // const todaysdate = "2023-02-15";
-      const dateDifference = getDateDifference(startDate, todaysdate);
-
-      console.log("Experience", dateDifference); // Output: { years: 2, months: 1, days: 14 }
-
-      document.getElementById("clock").innerHTML =
-        `    ${dateDifference.years}years, ${dateDifference.months} months , ${dateDifference.days}days   `
-      document.getElementById("datefrom").innerHTML = `<b>28-May-2021 to  ${todaysdates}  </b>`
-      setTimeout("getDateDifference()", 1000);
-
-
-    </script>
-
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-      import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
-
-      // Paste the code from Firebase
-      const firebaseConfig = {
-        apiKey: "AIzaSyDPqUppaM_cINaQPUjk79_oNWHvses5mY0",
-        authDomain: "webapp-5ff55.firebaseapp.com",
-        projectId: "webapp-5ff55",
-        storageBucket: "webapp-5ff55.appspot.com",
-        messagingSenderId: "645643836728",
-        appId: "1:645643836728:web:3797fc8ee6a64023daf5cd",
-        measurementId: "G-H5PJRHC1BQ"
-      };
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-
-      // Get a reference to the database service
-      const db = getDatabase(app);
-
-      document.getElementById('frmContact').addEventListener('submit', function (e) {
-        e.preventDefault();
-        set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
-          name: document.getElementById('fullname').value,
-          email: document.getElementById('email').value,
-          subject: document.getElementById('subject').value,
-          message: document.getElementById('message').value
-        });
-
-        alert('Your form is submitted');
-        document.getElementById('frmContact').reset();
+    document.getElementById('frmContact').addEventListener('submit', function (e) {
+      e.preventDefault();
+      set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+        name: document.getElementById('fullname').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
       });
-    </script>
+      alert('Your message has been sent successfully!');
+      document.getElementById('frmContact').reset();
+    });
+  </script>
 
-    <script src="index.js">
-
-      
-    </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
